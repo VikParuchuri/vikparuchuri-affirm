@@ -1,7 +1,7 @@
 Title: Happiness
 Date: 2013-12-31 20:19
 Slug: happiness
-Modified: 2014-01-03 16:30
+Modified: 2014-01-03 17:23
 Status: published
 
 I've had a lot of different jobs over the past 4 years, and I've had some incredible experiences along the way. Lately, I've been struggling with what to do next. Or perhaps more accurately, I've been struggling with how to decide what to do next. Decisions that seem obvious in hindsight are tough to come to grips with beforehand, and it's led me to think about what metric I am trying to maximize. I admit that it's odd to think of life as a way to increase certain metrics, but aren't we doing this already in a different way? A lot of people (myself included) will at some point say that all we care about is money. Isn't that just us saying that money is the metric we want to maximize? Now that I am older and wiser (yeah, right), I find myself increasingly concerned with maximizing my own happiness.
@@ -10,7 +10,7 @@ Happiness is this strange concept that nobody quite understands, nobody quite wa
 
 In the course of creating Happsee, I met/have been meeting with a lot of people in the Boston area who are doing interesting things in the field. One of these people is [Daniel Hadley](http://www.linkedin.com/in/danielhadley), the head of [SomerStat](http://www.ci.somerville.ma.us/departments/somerstat/staff), a very cool department of the city of [Somerville](http://www.somervillema.gov/) that tries to quantify various aspects of life in the city and make them better. One of these aspects is happiness, and SomerStat has compiled data on happiness in Somerville going back to 2006. I tried not to let my eyes get too wide when Daniel told me about this data (normal people like normal things -- I like data). He was gracious enough to share the anonymized data with me, and I will be looking at it in this post in order to see if it can help us better understand happiness.
 
-
+<!--more-->
 
 More about the data, and our first chart
 ----------------------------------------------
@@ -32,17 +32,17 @@ Mapping happiness
 
 People seem to have very strong feelings about their neighborhoods. Let's try mapping out happiness by area to see if there is any correlation:
 
+<div>
+    <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <link rel="stylesheet" href="http://www.vikparuchuri.com/stylesheets/somerville-happiness/somerville_happiness.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
 
-    
-    
-    
+    <div id="somerville-map" class="somerville-map"></div>
 
-    
-
-    
-    
-    
-
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script src="http://www.vikparuchuri.com/javascripts/somerville-happiness/rainbowvis.js"></script>
+    <script src="http://www.vikparuchuri.com/javascripts/somerville-happiness/somerville_map.js"></script>
+</div>
 
 The above shows the coordinates of each survey response to the question how happy are you right now in 2013. All coordinates are anonymized by adding random noise to both latitude and longitude (so some points are in weird places, like the middle of the highway).
 
@@ -57,17 +57,17 @@ We can use a statistical significance test to discover the things that are close
 
 The survey questions whose answers correlated closely with happiness in order of most to least:
 
-
-    How satisified are you with your life in general?
-    Taking everything into account, how satisfied are you with Somerville as a place to live?
-    How satisfied are you with your neighborhood as a place to live? 
-    In general, how similar are you to other people you know? 
-    How would you rate the Public Services in Somerville? (there were a lot of closely correlated items here, like public schools, garbage collection, and street maintenance) 
-    When making decisions, are you more likely to seek advice or decide for yourself?
-    Overall, would you say that the City of Somerville is moving in the right direction or the wrong direction?
-    What is your marital status?
-    
-
+<div>
+    <p class="c2">How satisified are you with your life in general?</p>
+    <p class="c2">Taking everything into account, how satisfied are you with Somerville as a place to live?</p>
+    <p class="c2">How satisfied are you with your neighborhood as a place to live? </p>
+    <p class="c2">In general, how similar are you to other people you know? </p>
+    <p class="c2">How would you rate the Public Services in Somerville? (there were a lot of closely correlated items here, like public schools, garbage collection, and street maintenance) </p>
+    <p class="c2">When making decisions, are you more likely to seek advice or decide for yourself?</p>
+    <p class="c2">Overall, would you say that the City of Somerville is moving in the right direction or the wrong direction?</p>
+    <p class="c2">What is your marital status?</p>
+    <br/>
+</div>
 
 The above items are correlated with happiness, which means that generally, as happiness changes, so do they (can be either positive or negative). However, this doesn't tell us anything actionable. For example, happier people could be more likely to think that the city of Somerville is headed in the right direction. What we really want to know is if thinking Somerville is headed in the right direction *causes* people to become happier.
 
@@ -78,24 +78,24 @@ Correlation versus causation is an extremely difficult problem to solve, especia
 
 The analysis indicates that how you answer the following question is caused by how happy you are:
 
-
-    Taking everything into account, how satisfied are you with Somerville as a place to live?
-    
-
+<div>
+    <p class="c2">Taking everything into account, how satisfied are you with Somerville as a place to live?</p>
+    <br/>
+</div>
 
 This is a very interesting result, as it shows that how satisfied you feel about life can be caused by how happy you feel in a particular moment. I will let the psychologists sort this result out, but for me personally, it indicates that trying to maximize moment-to-moment happiness could be a viable strategy.
 
 The analysis indicates that how you feel about these questions causes how happy you are. So, if you answer more positively to these, you will generally be happier:
 
-
-    Taking everything into account, how satisfied are you with Somerville as a place to live?
-    How satisfied are you with your neighborhood as a place to live? 
-    In general, how similar are you to other people you know? 
-    How do you feel about the Public Schools?
-    How do you feel about the Public Works Department (e.g. requests for yard waste stickers or white good pick-up)?
-    How do you feel about the Recreation Programs in Somerville?
-    
-
+<div>
+    <p class="c2">Taking everything into account, how satisfied are you with Somerville as a place to live?</p>
+    <p class="c2">How satisfied are you with your neighborhood as a place to live? </p>
+    <p class="c2">In general, how similar are you to other people you know? </p>
+    <p class="c2">How do you feel about the Public Schools?</p>
+    <p class="c2">How do you feel about the Public Works Department (e.g. requests for yard waste stickers or white good pick-up)?</p>
+    <p class="c2">How do you feel about the Recreation Programs in Somerville?</p>
+    <br/>
+</div>
 
 There are some surprises here (public works?), but they generally seem consistent with prior results. How people feel about their neighborhoods strongly affects how happy they are. Improving things like public school quality should boost resident happiness. Personally, this indicates that moving to another place would be a great way to boost happiness (luckily, I love Cambridge).
 
@@ -136,15 +136,12 @@ What's next?
 
 I will be looking into this data more and seeing if anything else remains to be discovered. There are a huge amount of interesting things that can be done, and thanks again to Daniel and SomerStat for letting me look at this.
 
-  As I continue making [Happsee](http://www.happsee.com), I am going to try to figure out these kinds of insights and more in real-time, which I am hugely excited about. Here is a map tracking two weeks of my own happiness in and around Boston:
+  As I continue making [Happsee](http://www.happsee.com), I am going to try to figure out these kinds of insights and more in real-time, which I am hugely excited about. Here is a map tracking two weeks of my own happiness in and around Boston:
 
-
-
-
+<div>
+<img src="http://www.vikparuchuri.com/images/somerville-happiness/hs2-1.png" height="300px" width="200px">
+</div>
 
 Imagine being able to anonymously map happiness in real-time throughout your city, and couple the mapping with realtime insight. This could be incredibly powerful. The more steps I take down the path to understanding myself and my own happiness, the more I am struck by how much it can tell me and help me.
 
 If you are interesting in talking more about this post, what I am working on, or data in general, feel free to contact me. If anyone wants to do similar analysis in their own city, I am happy to help. I normally put the code for my blog posts on Github, but I will need to hold off for now to clean the code up and check on whether or not the data can be released.
-
-
-
