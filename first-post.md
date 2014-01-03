@@ -1,45 +1,9 @@
 Title: First post
 Date: 2013-12-31 20:04
 Slug: first-post
-Modified: 2014-01-03 17:23
+Modified: 2014-01-03 22:01
 Status: published
 Category: Intro
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -172,12 +136,3 @@ Posts are written in Markdown, which is an awesome alternative to WYSIWYG editor
 
 
 If you have any questions or suggestions, I would love to hear them.  Email me at vik@equirio.com, or find me on [Twitter](https://twitter.com/VikParuchuri).
-
-
-
-
-
-
-
-
-
