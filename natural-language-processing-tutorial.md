@@ -1,7 +1,7 @@
 Title: Natural Language Processing Tutorial
 Date: 2013-06-26 00:02
 Slug: natural-language-processing-tutorial
-Modified: 2014-01-07 15:37
+Modified: 2014-01-07 21:27
 Status: published
 Category: 
 Tags: nlp,natural language processing,python,R,text
@@ -38,7 +38,7 @@ Let's say that the survey also asks people to rate their interest on a scale of 
 
 We would now have text and associated scores:
 
-![plot of chunk unnamed-chunk-3](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-3.png) 
 
 
 ## First steps
@@ -81,7 +81,7 @@ Tokenization where n-grams are extracted is also useful. N-grams are sequences o
 * Each column represents a unique term, and each cell *i,j* represents how many of term *j* are in document *i*.
   * We are using a simple term frequency bag of words. Other techniques, such as term frequency - inverse document frequency (tf-idf) would have something other than just counts in the cells.
 
-![plot of chunk unnamed-chunk-5](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-5.png) 
 
 
 ## Bag of words overview
@@ -112,11 +112,11 @@ Tokenization where n-grams are extracted is also useful. N-grams are sequences o
 
 Old features:
 
-![plot of chunk unnamed-chunk-6](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-6.png) 
 
 New features with lowercasing and spell correction:
 
-![plot of chunk unnamed-chunk-7](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-7.png) 
+![plot of chunk unnamed-chunk-7](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-7.png) 
 
 
 ## Orthogonality
@@ -168,7 +168,7 @@ Mean similarity:
 * The tests essentially say "Is feature x significantly different between low and high scoring texts"?
 * P-value -- the lower the p-value, the more significant the difference is. Generally, a .05 or a .01 is a good threshold for significance.
 
-![plot of chunk unnamed-chunk-10](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-10.png) 
 
 
 ## Finally, some machine learning!
@@ -214,7 +214,7 @@ Let's use this as our "test" text that we will predict a score for:
 ```
 
 
-![plot of chunk unnamed-chunk-13](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-13.png) 
+![plot of chunk unnamed-chunk-13](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-13.png) 
 
 
 * Note that we have used the exact same features as in the training matrix. 
@@ -249,15 +249,15 @@ Let's use this as our "test" text that we will predict a score for:
 
 First fold:
 
-![plot of chunk unnamed-chunk-16](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-16.png) 
+![plot of chunk unnamed-chunk-16](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-16.png) 
 
 
 Second fold:
-![plot of chunk unnamed-chunk-17](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-17.png) 
+![plot of chunk unnamed-chunk-17](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-17.png) 
 
 
 Predictions:
-![plot of chunk unnamed-chunk-18](../figure/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-18.png) 
+![plot of chunk unnamed-chunk-18](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/2013-06-26-natural-language-processing-tutorial-unnamed-chunk-18.png) 
 
 
 * Predictions are not very accurate due to very limited data.

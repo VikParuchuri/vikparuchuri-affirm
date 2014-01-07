@@ -1,7 +1,7 @@
 Title: Do the Simpsons characters like each other?
 Date: 2013-07-21 14:33
 Slug: how-do-simpsons-characters-feel-about-each-other
-Modified: 2014-01-07 15:42
+Modified: 2014-01-07 22:03
 Status: published
 Category: 
 Tags: R,python,machine learning,simpsons,sentiment analysis,NLP,audio
@@ -15,7 +15,7 @@ I first tried using natural language processing techniques to [determine who was
 
 From the labelled lines, we can determine how much each of the characters likes the rest. If you want to skip ahead, the heatmap of how much the characters like each other is below. It shows how much each character in the row likes each character in the column. Some characters may feel differently about each other (for example, check out Krusty and Lisa). Red indicates dislike, and green indicates like.
 
-![character sentiments](http://www.vikparuchuri.com/images/simpsons-sentiment/character_sentiments.png)
+![character sentiments](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-do-simpsons-characters-feel-about-each-other/character_sentiments.png)
 
 <!--more-->
 
@@ -105,22 +105,22 @@ When we finish looping through all of the dialogue lines we can compare each row
 
 The `character` is the character from the neighboring character matrix, the `pos_score` is the similarity between their matrix row and the positive sentiment vector, the `neg_score` is the similarity between their row and the negative sentiment vector, and `score` is `pos_score - neg_score`. So, Skinner appears to dislike Bart, to like Homer, and to be neutral to Marge.
 
-![skinner feelings](http://www.vikparuchuri.com/images/simpsons-sentiment/skinner_feelings.png)
+![skinner feelings](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-do-simpsons-characters-feel-about-each-other/skinner_feelings.png)
 
 Charts
 ------------------------------------------
 
 Unsurprisingly, Mr. Burns hates everyone:
 
-![burns feelings](http://www.vikparuchuri.com/images/simpsons-sentiment/burns_feelings.png)
+![burns feelings](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-do-simpsons-characters-feel-about-each-other/burns_feelings.png)
 
 Krusty is a happy guy, but seems to have a strange vendetta against Lisa:
 
-![krusty feelings](http://www.vikparuchuri.com/images/simpsons-sentiment/krusty_feelings.png)
+![krusty feelings](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-do-simpsons-characters-feel-about-each-other/krusty_feelings.png)
 
 Oddly, Lisa seems oblivious to this, and still likes Krusty. Although Homer and Bart aren't her favorites:
 
-![lisa feelings](http://www.vikparuchuri.com/images/simpsons-sentiment/lisa_feelings.png)
+![lisa feelings](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-do-simpsons-characters-feel-about-each-other/lisa_feelings.png)
 
 And Bart really doesn't like Skinner:
 

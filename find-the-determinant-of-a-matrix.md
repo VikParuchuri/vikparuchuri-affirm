@@ -1,7 +1,7 @@
 Title: Find the determinant of a matrix
 Date: 2013-07-15 19:11
 Slug: find-the-determinant-of-a-matrix
-Modified: 2014-01-07 15:42
+Modified: 2014-01-07 21:49
 Status: published
 Category: 
 Tags: math,ML,machine learning,python,matrix

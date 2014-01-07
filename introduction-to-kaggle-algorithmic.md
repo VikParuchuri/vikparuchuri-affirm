@@ -1,7 +1,7 @@
 Title: Introduction to Kaggle Algorithmic Trading Challenge
 Date: 2012-01-10 18:35
 Slug: introduction-to-kaggle-algorithmic
-Modified: 2014-01-07 15:30
+Modified: 2014-01-07 18:47
 Status: published
 Category: 
 Tags: Finance, Kaggle, Algorithms, R

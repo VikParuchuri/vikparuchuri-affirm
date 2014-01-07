@@ -1,7 +1,7 @@
 Title: Loading and/or Installing Packages Programmatically
 Date: 2012-05-08 05:03
 Slug: loading-andor-installing-packages
-Modified: 2014-01-07 15:34
+Modified: 2014-01-07 20:31
 Status: published
 Category: 
 Tags: packages, deployment, production, install, load, R

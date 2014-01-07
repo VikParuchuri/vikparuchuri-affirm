@@ -1,7 +1,7 @@
 Title: Figuring out which Simpsons character is speaking
 Date: 2013-07-17 11:36
 Slug: figuring-out-which-simpsons-character-is-speaking
-Modified: 2014-01-07 15:42
+Modified: 2014-01-07 22:00
 Status: published
 Category: 
 Tags: simpsons,percept,machine learning,ML,clustering,python,R
@@ -60,7 +60,7 @@ Just like it is difficult to decide which one of the 5000 varieties of soap at t
 
 We can figure out which characters are linguistically similar to each other, based on our small sample of scripts:
 
-![clusters](../images/simpsons-scripts/clusters.png)
+![clusters](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/figuring-out-which-simpsons-character-is-speaking/clusters.png)
 
 In the above, the larger clusters contain multiple characters, but they are only labelled by the first character. So, cluster "Moe" consists of:
 
@@ -83,11 +83,11 @@ Let's look at the initial data before we dive in.
 
 We can see how many lines each character has in our scripts:
 
-![how many lines](../images/simpsons-scripts/lines_per_character_initial.png)
+![how many lines](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/figuring-out-which-simpsons-character-is-speaking/lines_per_character_initial.png)
 
 We can also see what words each character is most likely to say (more common towards the bottom). As we have always suspected, it looks like the show does, in fact, revolve around Homer:
 
-![commonly said words](../images/simpsons-scripts/commonly_said_words_initial.png)
+![commonly said words](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/figuring-out-which-simpsons-character-is-speaking/commonly_said_words_initial.png)
 
 
 Make our model
@@ -111,11 +111,11 @@ Homer: That little snot boy. I'd like to smack that kid!
 
 We can also see who is speaking how many lines now:
 
-![how many lines](../images/simpsons-scripts/lines_per_character_final.png)
+![how many lines](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/figuring-out-which-simpsons-character-is-speaking/lines_per_character_final.png)
 
 Not all of the lines have been labelled, as the lines the algorithm is uncertain about are left unlabelled. Homer is also being assigned too many lines, but the proportion is semi-close to our previous graph. We can see what the commonly said words are:
 
-![commonly said words](../images/simpsons-scripts/commonly_said_words_final.png)
+![commonly said words](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/figuring-out-which-simpsons-character-is-speaking/commonly_said_words_final.png)
 
 From some of the commonly said words, we can see that some lines are being mis-attributed (lisa rarely says Homer, for instance), but it looks reasonable overall.
 

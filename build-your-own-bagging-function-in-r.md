@@ -1,7 +1,7 @@
 Title: Improve Predictive Performance in R with Bagging
 Date: 2012-01-18 07:49
 Slug: build-your-own-bagging-function-in-r
-Modified: 2014-01-07 15:41
+Modified: 2014-01-07 20:18
 Status: published
 Category: 
 Tags: R

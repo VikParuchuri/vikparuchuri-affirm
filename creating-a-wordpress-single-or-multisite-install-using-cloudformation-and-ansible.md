@@ -1,7 +1,7 @@
 Title: Creating a Wordpress Single or Multisite Install Using Cloudformation and Ansible
 Date: 2013-06-18 18:00
 Slug: creating-a-wordpress-single-or-multisite-install-using-cloudformation-and-ansible
-Modified: 2014-01-07 15:37
+Modified: 2014-01-07 21:24
 Status: published
 Category: 
 Tags: ansible,deployment,wordpress,python
@@ -79,11 +79,11 @@ One you login, you should be at the [management console](https://console.aws.ama
 
 Once you are in the cloudformation console, you will be able to click on "create stack". **Note that creating a stack will cost money.** You can use [this tool](http://calculator.s3.amazonaws.com/calc5.html) to estimate your cost.
 
-![create_stack](../images/wordpress-install/cf_console.png)
+![create_stack](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/cf_console.png)
 
 After clicking on "create stack", you will need to choose to upload the wordpress.json template.
 
-![upload template](../images/wordpress-install/cf_template.png)
+![upload template](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/cf_template.png)
 
 Once you fill in the stack name and click "next", you will come to the "specify parameters" screen. This is where the extensibility of cloudformation comes to the fore. This template lets you specify a few different variables.
 
@@ -134,7 +134,7 @@ The stack should now have finished coming up. If you see a red light and the sta
 
 Now that the stack has been created, you can click on the stack in the console and check on the outputs.
 
-![outputs](../images/wordpress-install/cf_outputs.png)
+![outputs](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/cf_outputs.png)
 
 The outputs will tell you the ELB address (referred to from hereon as ELBAddress) and the EC2 server address (referred to from hereon as ServerAddress). Save both of these somewhere: you can access them here anytime, but we will need them in several places.
 
@@ -193,10 +193,10 @@ Then, click on "Create Hosted Zone".
 
 This will pop up a box on the right that lets you enter your domain name. Enter your domain name without the www, and then click create hosted zone at the bottom.
 
-![hosted zones](../images/wordpress-install/53_hosted.png)
+![hosted zones](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/53_hosted.png)
 
 Your domain will now appear in the center panel. Select your domain, and then look at "delegation sets" at the right.
-![dns entries](../images/wordpress-install/53_delegation.png)
+![dns entries](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/53_delegation.png)
 
 These are your namesevers, and you will need to set these as the DNS records with your registrar. The AWS help at the top right will give you information on this if you have questions.
 
@@ -209,10 +209,10 @@ Select your domain in the Route 53 control panel, and the click on "go to record
 Now, you can click on "Create record set", which will pop up a box at the right.
 
 We will be making an alias record that points at our ELBAddress.
-![naked domain redirect](../images/wordpress-install/53_ndomain.png)
+![naked domain redirect](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/53_ndomain.pn)
 
 Click create record set when you are done, and then do the same for the full domain.
-![full domain redirect](../images/wordpress-install/53_domain.png)
+![full domain redirect](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/53_domain.pn)
 
 We are now setup as far as what we need for the wordpress install.
 
@@ -333,7 +333,7 @@ Now, to activate multisite mode for your wordpress install, you will have to go 
 
 You can then type in some settings to setup network mode. Make sure you select sub-domains!
 
-![activate network mode](../images/wordpress-install/wp_network.png)
+![activate network mode](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/wp_network.png)
 
 ### Post activation
 
@@ -360,7 +360,7 @@ Making new sites
 
 To make a new site, go to `YOUR_SERVER_ADDRESS/wp-admin/network/site-new.php`, and make a new site with a subdomain.
 
-![new site](../images/wordpress-install/wp_addsite.png)
+![new site](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/wp_addsite.png)
 
 Set up the DNS for that subdomain to redirect to your ELB, even if you are not using Route 53. If you already have a wildcard redirect, then you can skip this.
 
@@ -370,7 +370,7 @@ If you want to use a top level domain, such as test.com, for the site:
 
 Go to domain mapping in `YOUR_SERVER_ADDRESS/wp-admin/network/settings.php?page=dm_domains_admin` and set the id of the site (you can get this from the url when you click on a site in sites), and the domain. Make sure that primary is checked.
 
-![new domain](../images/wordpress-install/wp_adddomain.png)
+![new domain](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/wp_adddomain.png)
 
 You will have to redirect the domain (www.test.com) and the apex domain (test.com) to your ELB. You can do this via Route 53, and the instructions are above.
 

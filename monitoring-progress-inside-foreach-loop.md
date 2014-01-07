@@ -1,7 +1,7 @@
 Title: Monitoring Progress Inside a Foreach Loop
 Date: 2012-02-09 09:12
 Slug: monitoring-progress-inside-foreach-loop
-Modified: 2014-01-07 15:34
+Modified: 2014-01-07 20:31
 Status: published
 Category: 
 Tags: foreach, randomForest, doSnow, R

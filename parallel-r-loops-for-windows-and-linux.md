@@ -1,7 +1,7 @@
 Title: Parallel R Loops in Windows and Linux
 Date: 2012-01-17 14:41
 Slug: parallel-r-loops-for-windows-and-linux
-Modified: 2014-01-07 15:31
+Modified: 2014-01-07 18:47
 Status: published
 Category: 
 Tags: Linux, Windows, parallel, R

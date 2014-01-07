@@ -1,7 +1,7 @@
 Title: Inverting your very own matrix
 Date: 2013-07-14 11:19
 Slug: inverting-your-very-own-matrix
-Modified: 2014-01-07 15:38
+Modified: 2014-01-07 21:48
 Status: published
 Category: 
 Tags: math,ML,machine learning,python

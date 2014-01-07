@@ -1,7 +1,7 @@
 Title: Predicting season records for NFL teams - overview
 Date: 2013-07-09 10:42
 Slug: predicting-nfl-season-records-with-percept
-Modified: 2014-01-07 15:38
+Modified: 2014-01-07 21:28
 Status: published
 Category: 
 Tags: machine learning,ML,percept,equirio,NFL,football
@@ -33,7 +33,7 @@ In my case, I wanted to predict something NFL-related. One of the main problem i
 
 What is fairly easy to get is box score data, such as the below from [Pro football reference](http://www.pro-football-reference.com/boxscores/).
 
-![upload template](../images/nfl-season/pfr-box.png)
+![upload template](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/pfr-box.png)
 
 You can see that it is very generic information: for each game, we have the winner, the loser, who was at home, how many points each team had, how many turnovers each team had, and how many yards each team gained.
 

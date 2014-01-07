@@ -1,7 +1,7 @@
 Title: Predicting season records for NFL teams - part 2
 Date: 2013-07-09 14:20
 Slug: predicting-season-records-for-nfl-teams-part-2
-Modified: 2014-01-07 15:38
+Modified: 2014-01-07 21:48
 Status: published
 Category: 
 Tags: machine learning,ML,percept,equirio,NFL,football

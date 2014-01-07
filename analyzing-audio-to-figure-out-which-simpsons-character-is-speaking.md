@@ -1,7 +1,7 @@
 Title: Using the power of sound to figure out which Simpsons character is speaking
 Date: 2013-07-18 23:55
 Slug: analyzing-audio-to-figure-out-which-simpsons-character-is-speaking
-Modified: 2014-01-07 15:42
+Modified: 2014-01-07 22:02
 Status: published
 Category: 
 Tags: NLP,simpsons,R,python,ML,machine learning
@@ -61,11 +61,11 @@ Thankfully, we can exploit some properties of sound to ensure that it can be eas
 
 What we see below is a plot of the beginning of the simpsons intro music:
 
-![intro music](http://www.vikparuchuri.com/images/simpsons-audio/intro_sounds.png)
+![intro music](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/analyzing-audio-to-figure-out-which-simpsons-character-is-speaking/intro_sounds.png)
 
 We can zoom in to actually see the lines:
 
-![intro zoom](http://www.vikparuchuri.com/images/simpsons-audio/intro_zoom.png)
+![intro zoom](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/analyzing-audio-to-figure-out-which-simpsons-character-is-speaking/intro_zoom.png)
 
 One of the lines is the right side audio, one of the lines is the left side audio. It doesn't matter much which is which for our purposes, but let's say that blue is left and green is right. Most audio now, including our Simpsons audio, is in stereo format, which means that there are 2 independent sources of sound. When you put on a pair of headphones, or listen to speakers, different sound plays on the left and right if you have stereo audio. Audio could also be in mono format, in which case we would only see one line. For our purposes, stereo means that we have two streams of sound to look at.
 
@@ -73,11 +73,11 @@ You can see that sound has some obvious tendencies. The sound wave is oscillatin
 
 Here is Homer speaking the line `Sure do! When you're 18,you're out the door!`:
 
-![homer sound](http://www.vikparuchuri.com/images/simpsons-audio/homer_sound.png)
+![homer sound](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/analyzing-audio-to-figure-out-which-simpsons-character-is-speaking/homer_sound.png)
 
 And here is Lisa speaking the line `No, Dad, you promised if Bart and I got "C" averages, we could go to Kamp Krusty.`:
 
-![lisa sound](http://www.vikparuchuri.com/images/simpsons-audio/lisa_sound.png)
+![lisa sound](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/analyzing-audio-to-figure-out-which-simpsons-character-is-speaking/lisa_sound.png)
 
 We can note distinct differences between the two. A lot of this is due to the different words being spoken, but we can hope that at least some of it is due to the unique voice of Lisa as compared to Homer.
 
@@ -181,17 +181,17 @@ Visualizing the audio
 
 We can visualize our labelled lines and their predicted classifications in 2 dimensions with an SVM classification plot:
 
-![svm class](http://www.vikparuchuri.com/images/simpsons-audio/svm_class.png)
+![svm class](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/analyzing-audio-to-figure-out-which-simpsons-character-is-speaking/svm_class.png)
 
 This shows up where the support vectors between the classes (labels) are, and where they fall.
 
 We can also take our audio features, and use them to visualize the characters in two dimensions. This first plot shows you how vocally dissimilar (or similar) the characters are in the small initial sample of text that I hand-labelled, which comes out to 313 lines across 5 episodes. The larger a dot is, the more lines that character had.
 
-![initial line](http://www.vikparuchuri.com/images/simpsons-audio/initial_line_plot.png)
+![initial line](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/analyzing-audio-to-figure-out-which-simpsons-character-is-speaking/initial_line_plot.png)
 
 Now, we can use the algorithm to finish labelling the remaining lines of those 5 episodes. This gives us 1544 lines, and a different plot:
 
-![final line](http://www.vikparuchuri.com/images/simpsons-audio/final_line_plot.png)
+![final line](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/analyzing-audio-to-figure-out-which-simpsons-character-is-speaking/final_line_plot.png)
 
 Update: And here is the plot for 192 episodes across 10 seasons. In this case, the size of the dot is log scaled.
 

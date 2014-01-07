@@ -1,7 +1,7 @@
 Title: Using R in Ruby
 Date: 2012-01-10 18:08
 Slug: using-r-in-ruby
-Modified: 2014-01-07 16:21
+Modified: 2014-01-07 20:44
 Status: published
 Category: 
 Tags: Ruby, Windows, R

@@ -1,7 +1,7 @@
 Title: Linear Regression from the Ground Up
 Date: 2013-07-14 19:19
 Slug: linear-regression-from-the-ground-up
-Modified: 2014-01-07 15:38
+Modified: 2014-01-07 21:35
 Status: published
 Category: 
 Tags: math,linear regression,matrices,ML,machine learning,Python
@@ -11,7 +11,7 @@ Linear regression is a very basic technique that we use a lot in machine learnin
 
 In a 2-D coordinate system, we can plot observations (such as, a child's age is 1), and associated dependent variables (ie, the child has 1 friend) on an x/y axis, like the one below:
 
-![linear regression](../images/linear-regression/linear-system.png)
+![linear regression](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/linear-system.png)
 
 In the above system, we have plotted several observation and dependent variable pairs [1,1], [2,4], [3,9], [4,16]. We have also added in a line. This line allows us to predict the dependent variables for future observations (when the child is 5, according to our line, they will have 20 friends). The line is defined by an equation {%m%}y=bx+a{%em%} where b is the slope of the line, and a is the y-intercept. In the simplest form of linear regression, we can figure out b and a to find the line. In more complex forms, such as {%m%}y=b\_{1}x\_{1} + b\_{2}x\_{2}+a{%em%}, we can predict y using multiple features.
 

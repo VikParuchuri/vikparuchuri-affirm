@@ -1,7 +1,7 @@
 Title: Time Series Cointegration in R
 Date: 2012-01-10 19:00
 Slug: time-series-cointegration-in-r
-Modified: 2014-01-07 15:31
+Modified: 2014-01-07 20:18
 Status: published
 Category: 
 Tags: Finance, R

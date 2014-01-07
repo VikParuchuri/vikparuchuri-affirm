@@ -1,7 +1,7 @@
 Title: Resources for Learning Statistics and Data Mining
 Date: 2012-01-16 15:52
 Slug: resources-for-learning-statistics-and
-Modified: 2014-01-07 15:31
+Modified: 2014-01-07 18:47
 Status: published
 Category: 
 Tags: Machine learning, statistics
