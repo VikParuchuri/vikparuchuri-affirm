@@ -1,7 +1,7 @@
 Title: Making infographics using R and Inkscape
 Date: 2013-07-24 09:39
 Slug: making-infographics-using-r-and-inkscape
-Modified: 2014-01-07 15:42
+Modified: 2014-01-07 22:08
 Status: published
 Category: 
 Tags: R,infographics,inkscape,plotting,ggplot2,visualization
