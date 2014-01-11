@@ -1,7 +1,7 @@
 Title: What makes us happy?  Lets look at data to find out.
 Date: 2013-11-13 17:49
 Slug: what-makes-people-happy
-Modified: 2014-01-07 19:16
+Modified: 2014-01-09 15:23
 Status: published
 Category: 
 Tags: happiness,happsee,Somerville,R,leaflet,Kaggle,causation
@@ -20,11 +20,11 @@ More about the data, and our first chart
 
 The data from Somerville consists of a survey that asks people how happy they are, how satisfied with life they are, and some other questions about their happiness on a 1-10 scale. It also contains other information, like location, race, and gender. Here is a small sample:
 
-![somerville sample](http://www.vikparuchuri.com/images/somerville-happiness/somerville_survey.png)
+![somerville sample](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/what-makes-people-happy/somerville_survey.png)
 
 As you can see, the data is pretty messy in places. My first step was to cleanup and explore the data. After doing so, I got this plot:
 
-![somerville happiness 2d](http://www.vikparuchuri.com/images/somerville-happiness/happiness_clusters.png)
+![somerville happiness 2d](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/what-makes-people-happy/happiness_clusters.png)
 
 This plot comes from taking survey questions about how satisfied people are in general, and how satisfied they are about their neighborhoods, and turning them into two dimensional data. The technique I used (read more about [SVD](http://en.wikipedia.org/wiki/Singular_value_decomposition) if you are interested, it's very cool) thought that people's happiness and their satisfaction with their neighborhood were both very important, and clustered people according to them.
 
@@ -37,14 +37,14 @@ People seem to have very strong feelings about their neighborhoods. Let's try ma
 
 <div>
     <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
-    <link rel="stylesheet" href="http://www.vikparuchuri.com/stylesheets/somerville-happiness/somerville_happiness.css"/>
+    <link rel="stylesheet" href="https://vik-affirm-assets.s3-us-west-1.amazonaws.com/what-makes-people-happy/somerville_happiness.css"/>
     <link href='http://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
 
     <div id="somerville-map" class="somerville-map"></div>
 
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
-    <script src="http://www.vikparuchuri.com/javascripts/somerville-happiness/rainbowvis.js"></script>
-    <script src="http://www.vikparuchuri.com/javascripts/somerville-happiness/somerville_map.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/vik-affirm-assets/what-makes-people-happy/rainbowvis.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/vik-affirm-assets/what-makes-people-happy/somerville_map.js"></script>
 </div>
 
 The above shows the coordinates of each survey response to the question how happy are you right now in 2013. All coordinates are anonymized by adding random noise to both latitude and longitude (so some points are in weird places, like the middle of the highway).
@@ -107,15 +107,15 @@ A closer look at some interesting correlations
 
 Let's take a closer look at some of the interesting variables that could potentially cause happiness:
 
-![neighborhood satisfaction](http://www.vikparuchuri.com/images/somerville-happiness/neighborhood_satisfaction.png)
+![neighborhood satisfaction](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/what-makes-people-happy/neighborhood_satisfaction.png)
 
 It seems that happiness goes up as you like your neighborhood more, but there is a strange set of high happiness levels associated with low neighborhood satisfaction. I wonder if anyone in Somerville has insight into this.
 
-![similarity](http://www.vikparuchuri.com/images/somerville-happiness/similarity.png)
+![similarity](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/what-makes-people-happy/similarity.png)
 
 This is very interesting to me, as surrounding yourself with diverse viewpoints is often helpful.
 
-![public schools](http://www.vikparuchuri.com/images/somerville-happiness/public_schools.png)
+![public schools](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/what-makes-people-happy/public_schools.png)
 
 A lot of public services look like this one (although to lesser degrees).
 
@@ -142,7 +142,7 @@ I will be looking into this data more and seeing if anything else remains to be 
   As I continue making [Happsee](http://www.happsee.com), I am going to try to figure out these kinds of insights and more in real-time, which I am hugely excited about. Here is a map tracking two weeks of my own happiness in and around Boston:
 
 <div>
-<img src="http://www.vikparuchuri.com/images/somerville-happiness/hs2-1.png" height="300px" width="200px">
+<img src="https://vik-affirm-assets.s3-us-west-1.amazonaws.com/what-makes-people-happy/hs2-1.png" height="300px" width="200px">
 </div>
 
 Imagine being able to anonymously map happiness in real-time throughout your city, and couple the mapping with realtime insight. This could be incredibly powerful. The more steps I take down the path to understanding myself and my own happiness, the more I am struck by how much it can tell me and help me.

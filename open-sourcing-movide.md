@@ -1,7 +1,7 @@
 Title: Open sourcing movide, a student-centric learning platform
 Date: 2013-10-18 17:24
 Slug: open-sourcing-movide
-Modified: 2014-01-07 15:42
+Modified: 2014-01-09 15:24
 Status: published
 Category: 
 Tags: LMS,Movide,learning,education,edtech,open source
@@ -35,17 +35,17 @@ Movide is a tool oriented around the idea of a class. A class can be a teacher a
 
 Here is how the class dashboard looks. It lets you create classes and view your existing classes:
 
-![movide classes](http://www.vikparuchuri.com/images/movide/dashboard.png)
+![movide classes](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/open-sourcing-movide/dashboard.png)
 
 Inside a class, Movide lets anyone, student or teacher, add content and problems. Content can be videos, links, personal blog entries, and so on. Problems right now are restricted to assignments, where students respond to a question with text as well as images, video, and files if they choose, and multiple choice. But the selection will expand over time. Once this content exists, teachers can organize it, and students and teachers can discuss it. Teachers can define concrete learning objectives and skills, and track student progress towards those skills.
 
 Here is how the learning resources (which contain content and problems) look inside a class:
 
-![movide resources](http://www.vikparuchuri.com/images/movide/resources.png)
+![movide resources](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/open-sourcing-movide/resources.png)
 
 And here is how the learning objectives and skills look inside a class:
 
-![movide skills](http://www.vikparuchuri.com/images/movide/skills.png)
+![movide skills](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/open-sourcing-movide/skills.png)
 
 We can quickly see how some of the ideas I expressed above have made it into Movide. Movide enables students to find interesting and useful content and then share and discuss it with each other, all while still working towards learning objectives. This combines the power of self-paced learning with the necessities of the curriculum, while encouraging students to interact with each other. It also enables teachers to direct the conversation and add course content.
 

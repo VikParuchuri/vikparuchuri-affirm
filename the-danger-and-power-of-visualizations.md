@@ -1,7 +1,7 @@
 Title: The power, and danger, of visualizations
 Date: 2013-08-07 12:01
 Slug: the-danger-and-power-of-visualizations
-Modified: 2014-01-07 15:42
+Modified: 2014-01-09 15:27
 Status: published
 Category: 
 Tags: R,senate,visualization,mistakes,svd
@@ -11,7 +11,7 @@ I recently posted about [visualizing the voting patterns](/blog/how-divided-is-t
 
 I was then able to turn this data into two dimensions and plot it to show how the voting patterns of the senators differed. This led to the plot below:
 
-![senate polarization](http://www.vikparuchuri.com/images/senate-polarization/senate.png)
+![senate polarization](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/the-danger-and-power-of-visualizations/senate.png)
 
 From the above plot, it appears that the Massachusetts and New Jersey senators are very extreme in their voting patterns. Both [Juan Carlos Borrás](http://jcborras.net/) and [Fr.](http://twitter.com/phnk) pointed out in the comments that this was due to the coding of the votes. Massachusetts and New Jersey had senators who were changed mid-term, causing their votes to be coded as a 3. Since nobody else had votes coded as a 3, this caused them to appear like they had very different voting patterns, when in fact, they just were not there.
 
@@ -24,7 +24,7 @@ If we reconstruct the chart without any senators who were switched mid-term, we 
 Our new story
 ----------------------------------------------
 
-![updated senate polarization](http://www.vikparuchuri.com/images/senate-polarization/updated_senate_plot.png)
+![updated senate polarization](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/the-danger-and-power-of-visualizations/updated_senate_plot.png)
 
 The above plot is an updated version, and tells our new story. As we can see, the new story shares a lot of similarities with the old story -- we still see that Collins and Murkowski are close to the center ideologically, and we still see that there is a clear ideological dividing line between the parties.
 

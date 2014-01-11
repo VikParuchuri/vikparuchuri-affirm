@@ -1,7 +1,7 @@
 Title: How divided is the Senate?
 Date: 2013-07-30 00:05
 Slug: how-divided-is-the-senate
-Modified: 2014-01-07 15:42
+Modified: 2014-01-09 15:38
 Status: published
 Category: 
 Tags: R,politics,senate,democrats,republicans,congress,python
@@ -13,7 +13,7 @@ As I started to walk down this road, I figured that it would be tough to find th
 
 From the vote data, we can generate plots showing how polarized the Senate is. We will assume that two people are not polarized if they have similar voting patterns. If we take only [this vote](http://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=113&session=1&vote=00187), we would assume that Senator Ayotte and Senator Alexander, who both voted no, are not polarized, as they share the same opinion. This is well and good, but one bill isn't really reflective of the voting records of the two Senators. If we really want to figure out where they stand, we would need to perform the analysis across all votes. I will describe the process further down, but for now, let's jump to a polarization chart:
 
-![senate polarization](http://www.vikparuchuri.com/images/senate-polarization/senate.png)
+![senate polarization](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-divided-is-the-senate/senate.png)
 
 The above chart has a dot for each Senator, although only some senators are labelled due to space constraints. The further apart the dots are, the more the views of the two senators contrast. Dots are shaded by political affiliation. How can we generate this chart? Keep reading to find out.
 
@@ -24,7 +24,7 @@ Getting senate data
 
 The first thing that we need to do is get the Senate data. We can start on [this page](http://www.senate.gov/pagelayout/legislative/a_three_sections_with_teasers/votes.htm). We see a roll call table in the bottom right. Each roll call table has a listing of each vote in a given congress:
 
-![roll call table](http://www.vikparuchuri.com/images/senate-polarization/roll_call_table.png)
+![roll call table](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-divided-is-the-senate/roll_call_table.png)
 
 If we click on the vote, we can see the results of the vote.
 
@@ -236,7 +236,7 @@ We end up with this for the 113th Congress:
 
 Once we have these singular values, we can use them to plot our original chart:
 
-![senate polarization](http://www.vikparuchuri.com/images/senate-polarization/senate.png)
+![senate polarization](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-divided-is-the-senate/senate.png)
 
 Interesting observations
 ----------------------------------------------------
@@ -369,8 +369,9 @@ Here are all the senators, this time sorted by their distances:
 <tr><td>44</td><td>-0.0228120494502621</td><td>-0.0501247061910197</td><td>1</td><td>D</td><td>NC</td><td>Hagan</td><td>Hagan (D-NC)</td><td>0.109873667752502</td></tr>
 </tbody>
 </table>
-
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
   <script>
+   $("head link[rel='stylesheet']").last().after("<link rel='stylesheet' type='text/css' href='http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css'>");
     $('.table').dataTable({
         "bPaginate": false,
         "bLengthChange": true,
@@ -386,7 +387,7 @@ Here are all the senators, this time sorted by their distances:
 
 We can also make a graphic of the most "extreme" senators given this distance:
 
-![senate extremity](http://www.vikparuchuri.com/images/senate-polarization/most_radical.png)
+![senate extremity](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-divided-is-the-senate/most_radical.png)
 
 Note that the minority party is more likely to be extreme by this distance metric, because the typical view is titled towards the party with more votes.
 
@@ -395,7 +396,7 @@ Using historical data
 
 We can also calculate how polarized the parties have been by calculating how "extreme" the average member in each party was at any given time.
 
-![senate extremity](http://www.vikparuchuri.com/images/senate-polarization/polarization.png)
+![senate extremity](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/how-divided-is-the-senate/polarization.png)
 
 We can see how polarization has changed over time, and the average distance of each member to the typical voting pattern has shifted.
 

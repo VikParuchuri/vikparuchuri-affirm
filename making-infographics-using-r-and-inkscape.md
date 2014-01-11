@@ -1,7 +1,7 @@
 Title: Making infographics using R and Inkscape
 Date: 2013-07-24 09:39
 Slug: making-infographics-using-r-and-inkscape
-Modified: 2014-01-07 22:08
+Modified: 2014-01-09 05:02
 Status: published
 Category: 
 Tags: R,infographics,inkscape,plotting,ggplot2,visualization
@@ -17,7 +17,7 @@ I then came upon the concept of retouching charts generated in R using a tool li
 
 This post will take us from a raw chart exported from R to a finished infographic. The final graphic is below:
 
-![voice fingerprints final](http://www.vikparuchuri.com/images/simpsons-scripts/voice_fingerprints.png)
+![voice fingerprints final](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/voice_fingerprints.png)
 
 <!--more-->
 
@@ -26,15 +26,15 @@ Starting out
 
 I generated the charts we will start with using [this file](https://github.com/VikParuchuri/simpsons-scripts/blob/master/generate-charts.R) in [this repo](https://github.com/vikparuchuri/simpsons-scripts).
 
-It will take a bit of work to get started with, so [here](http://www.vikparuchuri.com/downloads/code/voice_fingerprints_initial.eps) is the .eps version of the file if you want.
+It will take a bit of work to get started with, so [here](https://s3-us-west-1.amazonaws.com/vik-affirm-assets/voice_fingerprints_initial.eps) is the .eps version of the file if you want.
 
 Here is the .png version of the chart if you want to see how it looks:
 
-![voice fingerprints initial](http://www.vikparuchuri.com/images/simpsons-scripts/voice_fingerprints_initial.png)
+![voice fingerprints initial](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/voice_fingerprints_initial.png)
 
 As you can guess from the .eps file extension, the first step is exporting your chart in .eps format. [Here](http://stackoverflow.com/questions/5142842/export-a-graph-to-eps-file-with-r) is a stackoverflow thread about doing exactly that in R. In Rstudio, the "export" option in the plot dialogue has format selection:
 
-![eps format selection](http://www.vikparuchuri.com/images/simpsons-scripts/eps_format_selection.png)
+![eps format selection](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/eps_format_selection.png)
 
 Starting Inkscape
 ---------------------------------------------
@@ -47,7 +47,7 @@ We can now start up inkscape, and choose our .eps file to load.
 
 A dialog will pop up, choose these options (they may already be selected):
 
-![eps import settings](http://www.vikparuchuri.com/images/simpsons-scripts/eps_import_settings.png)
+![eps import settings](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/eps_import_settings.png)
 
 If parts of the image are cut off, you may need to go back to R and export at a higher resolution.
 
@@ -56,11 +56,11 @@ Editing the Image
 
 The first thing we can do is delete all of the text. We can do this by using the textbox tool (F8), and then clicking on the text and deleting.
 
-![no text](http://www.vikparuchuri.com/images/simpsons-scripts/no_text.png)
+![no text](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/no_text.png)
 
 Let's delete the legends on the right. We can use the selector tool (F1), and then hold shift and click and drag a box around the legend elements. Then hit delete to get rid of all of them.
 
-![no legend](http://www.vikparuchuri.com/images/simpsons-scripts/no_legend.png)
+![no legend](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/no_legend.png)
 
 We can move the boxes around to make sure that they don't overlap. Use the node tool (F2) to select a circle, and then use the select tool (F1) to move it.
 
@@ -68,32 +68,32 @@ Now, let's ungroup everything. A group in inkscape is treated as a single object
 
 Then we can select the background (click somewhere in the gray with the select tool) and delete it with the delete key:
 
-![no background](http://www.vikparuchuri.com/images/simpsons-scripts/no_background.png)
+![no background](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/no_background.png)
 
 It would be nice to add title text and some text for each of the circles, but it would also be nice if it was a bit unique. Let's get the simpsons font from [here](http://www.dafont.com/simpsonfont.font), and [follow the inkscape instructions](http://wiki.inkscape.org/wiki/index.php/Installing_fonts) to get it working. You will need to restart inkscape after following the directions.
 
 We can now use the textbox tool (F8) to add textboxes around the circles. Textboxes can be moved using the select tool. We can also change the font size and font in the top left. It may help to make one box, and then use ctrl+d (duplicate) and the select tool to make new boxes and move them to the right spot.
 
-![with text](http://www.vikparuchuri.com/images/simpsons-scripts/with_text.png)
+![with text](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/with_text.png)
 
 We can add a title using the same principle. Once the title is added, you may notice that what we currently have is taking up the whole canvas. This is mostly due to a white box that surrounds everything.
 
 Let's get rid of the white box by moving it to a background layer. Use the select tool to click anywhere in the white surrounding the circles. In the menu, click layers --> add layer, and make a background layer:
 
-![add layer](http://www.vikparuchuri.com/images/simpsons-scripts/add_layer.png)
+![add layer](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/add_layer.png)
 
 Once this is done, we can click anywhere in the whitespace and resize the image to fit into the page. If you want to move the title box, right click in the white space and hit ungroup to be able to move elements individually.
 
-![resized](http://www.vikparuchuri.com/images/simpsons-scripts/resized.png)
+![resized](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/resized.pn)
 
 All that's left is aligning everything. Select all of the elements, and hit `ctrl+shift+a` to bring up the alignment menu on the right. Make sure to treat everything as a group, and select to align vertically.
 
-![alignment](http://www.vikparuchuri.com/images/simpsons-scripts/alignment.png)
+![alignment](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/alignment.png)
 
 Now, we are done. You can export your image as a bitmap using the file menu. If anything appears transparent, you can resize the bottom white box to also be behind the title.
 
 
-![intermediate done](http://www.vikparuchuri.com/images/simpsons-scripts/voice_fingerprints_initial1.png)
+![intermediate done](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-infographics-using-r-and-inkscape/voice_fingerprints_initial1.pn)
 
 Conclusion
 ---------------------------------------

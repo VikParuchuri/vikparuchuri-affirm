@@ -1,7 +1,7 @@
 Title: Evolve your own beats: automatically generating music via algorithms
 Date: 2013-07-26 08:28
 Slug: evolve-your-own-beats-automatically-generating-music
-Modified: 2014-01-07 15:42
+Modified: 2014-01-09 15:10
 Status: published
 Category: 
 Tags: music,audio,sound,R,python,remix
@@ -186,11 +186,11 @@ I was then able to extract audio features from these tracks. Audio features are 
 
 Here are the sound waves in the first 10 seconds of a classical track:
 
-![10 seconds of song](http://www.vikparuchuri.com/images/evolve-beats/song_10s.png)
+![10 seconds of song](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/evolve-your-own-beats-automatically-generating-music/song_10s.png)
 
 And here are the sound waves in the first 10 seconds of an electronic track:
 
-![10 seconds of song](http://www.vikparuchuri.com/images/evolve-beats/esong_10s.png)
+![10 seconds of song](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/evolve-your-own-beats-automatically-generating-music/esong_10s.png)
 
 One of the lines is the left channel audio, and one is the right. It doesn't matter overly much which is which. Let's say that green is right. We can quickly see that the second track has more intense peaks, and appears to have higher energy when compared with the classical track. Using our knowledge of classical music vs electronic music, this makes sense. Just like we can look at the two graphs and understand that they are different, so can a computer.
 
@@ -247,7 +247,7 @@ Splicing/Remixing
 
 Once we have a musical quality assessment tool, we can splice new tracks into our existing tracks to make remixes. Here is roughly how splicing works:
 
-![splicing workflow](http://www.vikparuchuri.com/images/evolve-beats/workflow.png)
+![splicing workflow](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/evolve-your-own-beats-automatically-generating-music/workflow.png)
 
 So, we pull a randomly selected short audio clip out of a randomly selected track (Track 2). We then use the quality assessor (Algorithm) to see if it is good (if it close to 0 or 1, as we are defining things that are pure examples as "good"). We do this a few times, and take the "best" audio clip (Best Clip), and insert it into several evenly spaced places in the original track (Track 1).
 
@@ -262,7 +262,7 @@ Once we have a way to splice, we can perform the splicing for each of our input 
 
 Once we get our first remixed song, we can look at the first 10 seconds:
 
-![10 seconds of song](http://www.vikparuchuri.com/images/evolve-beats/mix_10s.png)
+![10 seconds of song](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/evolve-your-own-beats-automatically-generating-music/mix_10s.png)
 
 We can see that its audio signature appears to be more towards the electronic side, rather than the classical side.
 
@@ -311,7 +311,7 @@ Looking at all songs
 
 Once we have generated a few tracks, we can reduce the features in them to `2` instead of `319` using [singular value decomposition](http://en.wikipedia.org/wiki/Singular_value_decomposition). We can also do this for the original songs in our database. This projects the values into two dimensions, which allows us to plot them:
 
-![song similarity](http://www.vikparuchuri.com/images/evolve-beats/music_types.png)
+![song similarity](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/evolve-your-own-beats-automatically-generating-music/music_types.png)
 
 We are visualizing 522 songs, 22 of which are generated songs. The dots closer together are more similar. We can see that classical and electronic tend to be grouped together, with some overlap.
 

@@ -1,7 +1,7 @@
 Title: Programming instrumental music from scratch
 Date: 2013-07-29 15:34
 Slug: making-instrumental-music-from-scratch
-Modified: 2014-01-07 15:42
+Modified: 2014-01-09 15:42
 Status: published
 Category: 
 Tags: R,python,music,markov chains,genetic algorithms,machine learning,ML,instruments
@@ -30,6 +30,11 @@ I got instrumental tracks from [midi world](http://www.midiworld.com/) and [midi
 
 Below are some sample tracks created using the algorithm. If the player below does not show up you may have to visit [my site](http://www.vikparuchuri.com/blog/making-instrumental-music-from-scratch#player) to see it.
 
+<script>
+$("head link[rel='stylesheet']").last().after("<link type='text/css' href='https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-instrumental-music-from-scratch/jplayer.blue.monday.css' rel='stylesheet' />");
+</script>
+    <script src="https://s3-us-west-1.amazonaws.com/vik-affirm-assets/making-instrumental-music-from-scratch/jplayer.playlist.min.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/vik-affirm-assets/making-instrumental-music-from-scratch/jquery.jplayer.min.js"></script>
 <div>
     <div id="jquery_jplayer_2" class="jp-jplayer"></div>
     <div id="jp_container_2">
@@ -126,11 +131,11 @@ We can write this information to a midi file in bytes. [Here](http://www.midi.or
 
 Byte code is a step between how we see files and data, and how computers store files and data. For example, we can use a hex editor to see the hex representation of the word "Hello":
 
-![bytes](http://www.vikparuchuri.com/images/midi-music/bytes.png)
+![bytes](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-instrumental-music-from-scratch/bytes.png)
 
 The midi format stores data in a similar way:
 
-![midi bytes](http://www.vikparuchuri.com/images/midi-music/midi_bytes.png)
+![midi bytes](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-instrumental-music-from-scratch/midi_bytes.png)
 
 Even from this brief glimpse of the midi file format, we can see that we don't want to be stuck directly editing midi files. It would be quite painful. Luckily, several people have written containers for midi. These containers allow midi to be edited in natural ways using programming languages, without actually having to edit the files directly. One of these is called [python-midi](https://github.com/vishnubob/python-midi), and is the editor I chose to use.
 
@@ -183,13 +188,13 @@ MIDI is critical to what we want to do, and once we have the principles down, we
 
 Here is a rough diagram of our algorithm:
 
-![algo flow](http://www.vikparuchuri.com/images/midi-music/algo-flow.png)
+![algo flow](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-instrumental-music-from-scratch/algo-flow.png)
 
 We will exploit [markov chains](https://en.wikipedia.org/wiki/Markov_chain) to make our basic tracks. Markov chains are defined with the probability of one state changing to another state. For example, let's say that for the past 5 days, the weather was `Sunny, Cloudy, Sunny, Sunny, Sunny`. So, after it was sunny, it was cloudy on one day, and sunny on two other days. After it was cloudy, it was sunny on one day. So, our system has two states, sunny and cloudy, and it transitions between those states with a certain probability.
 
 Creating a markov chain:
 
-![markov chain](http://www.vikparuchuri.com/images/midi-music/markov-chain.png)
+![markov chain](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-instrumental-music-from-scratch/markov-chain.png)
 
 If today was sunny, there would be a 66% chance of tomorrow being sunny, and a 33% chance of tomorrow being cloudy. A markov chain is a fancy way of formalizing transitions between things.
 
@@ -297,7 +302,7 @@ In order to do this, we must first convert our song into sound. We could make an
 
 We convert our midi file into sound using [fluidsynth](http://sourceforge.net/apps/trac/fluidsynth/). I talked about extracting musical features in my previous post, but I will talk about it a bit here. Sound is just a wave, and we can measure that wave at various points to get intensities.
 
-![10 seconds of song](http://www.vikparuchuri.com/images/evolve-beats/song_10s.png)
+![10 seconds of song](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-instrumental-music-from-scratch/song_10s.png)
 
 The above is an example of 10 seconds of a song. The blue and green lines represent different audio channels. Another way to look at this would be to look at it as a sequence of numbers:
 
@@ -330,7 +335,7 @@ After we do this, we keep the best songs, generate new songs to add "fresh blood
 
 Here is a diagram of this:
 
-![ga flow](http://www.vikparuchuri.com/images/midi-music/ga-flow.png)
+![ga flow](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-instrumental-music-from-scratch/ga-flow.png)
 
 We repeat our genetic algorithm a few times, and we end up with finished songs.
 
@@ -339,7 +344,7 @@ Results
 
 When we run the algorithm over 2 generations with 100 songs per generation, we can process our output songs to visualize where they fall in relation to each other. See the previous post for details, but this involves taking several audio features and decomposing them to two dimensions.
 
-![midi](http://www.vikparuchuri.com/images/midi-music/midi_generated.png)
+![midi](https://vik-affirm-assets.s3-us-west-1.amazonaws.com/making-instrumental-music-from-scratch/midi_generated.png)
 
 We can see that our generated music is very similar to classical music, although it appears to have its own distinct characteristics.
 
